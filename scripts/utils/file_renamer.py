@@ -1,8 +1,8 @@
 import os
 
-path = "./data/RawOriginal"
+path = os.path.join('data','RawOriginal')
 files = os.listdir(path)
 suffix = 'raw_'
 
 for i,file in enumerate(files):
-    os.rename(f"{path}/{file}",f"{path}/{suffix}{i}.jpg")
+    os.rename(os.path.join(path,file), os.path.join(path,f"{suffix}{i}.jpg"))
